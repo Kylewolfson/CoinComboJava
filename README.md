@@ -6,3 +6,6 @@ BDD
 5. Works for exact change using quarters and dimes, 85, 3 quarters and 1 dime.
 6. Get value greater than or equal 5 cents but less than 10, 5, 1 nickel.
 7. Get value greater than or equal 1 cents but less than 5, 1, 1 penny.
+
+Integration testCoinCombinations
+1. Home page opens properly, "Change", opens home page

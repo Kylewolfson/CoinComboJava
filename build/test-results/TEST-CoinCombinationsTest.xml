@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CoinCombinationsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-21T17:02:54" hostname="epicodus-54.local" time="0.003">
+<testsuite name="CoinCombinationsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-04-21T17:38:07" hostname="epicodus-54.local" time="0.002">
   <properties/>
-  <testcase name="runCoinCombinations_coins85_3quarters" classname="CoinCombinationsTest" time="0.002"/>
+  <testcase name="runCoinCombinations_coins85_3quarters" classname="CoinCombinationsTest" time="0.001"/>
   <testcase name="runCoinCombinations_coinsAboveOrEqualTo10_dime" classname="CoinCombinationsTest" time="0.0"/>
   <testcase name="runCoinCombinations_coins85_1dime" classname="CoinCombinationsTest" time="0.0"/>
   <testcase name="runCoinCombinations_coinsAboveOrEqualTo20_2dimes" classname="CoinCombinationsTest" time="0.0"/>
   <testcase name="runCoinCombinations_coinsAboveOrEqualTo25_quarter" classname="CoinCombinationsTest" time="0.0"/>
   <testcase name="runCoinCombinations_coinsAboveOrEqualTo75_3quarters" classname="CoinCombinationsTest" time="0.0"/>
-  <testcase name="runCoinCombinations_coinsAboveOrEqualTo1_penny" classname="CoinCombinationsTest" time="0.0"/>
+  <testcase name="runCoinCombinations_coinsAboveOrEqualTo1_penny" classname="CoinCombinationsTest" time="0.001"/>
   <testcase name="runCoinCombinations_coinsAboveOrEqualTo5_nickel" classname="CoinCombinationsTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
