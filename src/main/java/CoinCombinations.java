@@ -1,22 +1,53 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class CoinCombinations {
 
-  public int[] runCoinCombinations(Integer cents) {
-    int[] outputArray = {0, 0, 0, 0};
-    while (cents >= 25) {
+  public ArrayList<Object> runCoinCombinations(Integer cents) {
+    ArrayList<Object> outputArray = new ArrayList<Object>();
+      outputArray.add(0);
+      outputArray.add(0);
+      outputArray.add(0);
+      outputArray.add(0);
+    Integer quarterSupply = 2;
+    Integer dimeSupply = 2;
+    Integer nickelSupply = 3;
+    Integer counter = 0;
+    boolean ranOutOfQuarters = false;
+    boolean ranOutOfDimes = false;
+    boolean ranOutOfNickels = false;
+    if ((quarterSupply + 1) * 25 <= cents) {
+      ranOutOfQuarters = true;
+    }
+    outputArray.add(ranOutOfQuarters);
+    while (cents >= 25 && quarterSupply > 0) {
       cents -= 25;
-      outputArray[0] ++;
+      counter ++;
+      quarterSupply --;
     }
-    while (cents >= 10) {
+    outputArray.set(0, counter);
+    if ((dimeSupply + 1) * 10 <= cents) {
+      ranOutOfDimes = true;
+    }
+    outputArray.add(ranOutOfDimes);
+    counter = 0;
+    while (cents >= 10 && dimeSupply > 0) {
       cents -= 10;
-      outputArray[1] ++;
+      counter ++;
+      dimeSupply --;
     }
-    while (cents >= 5) {
+    outputArray.set(1, counter);
+    counter = 0;
+    if ((nickelSupply + 1) * 5 <= cents) {
+      ranOutOfNickels = true;
+    }
+    outputArray.add(ranOutOfNickels);
+    while (cents >= 5 && nickelSupply > 0) {
       cents -= 5;
-      outputArray[2] ++;
+      counter ++;
+      nickelSupply --;
     }
-    outputArray[3] = cents;
+    outputArray.set(2, counter);
+    outputArray.set(3, cents);
     return outputArray;
   }
 }

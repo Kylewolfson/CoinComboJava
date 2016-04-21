@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import spark.ModelAndView;
@@ -24,12 +24,20 @@ public class App {
       Integer inputtedCents = Integer.parseInt(inputtedCentsAsString);
 
       CoinCombinations myCoinCombinations = new CoinCombinations();
-      int[] results = myCoinCombinations.runCoinCombinations(inputtedCents);
-      Integer quarters = results[0];
-      Integer dimes = results[1];
-      Integer nickels = results[2];
-      Integer pennies = results[3];
+      ArrayList<Object> results = myCoinCombinations.runCoinCombinations(inputtedCents);
+      Integer quarters = (Integer) results.get(0);
+      Integer dimes = (Integer) results.get(1);
+      Integer nickels = (Integer) results.get(2);
+      Integer pennies = (Integer) results.get(3);
+      boolean ranOutOfQuarters = (boolean) results.get(4);
+      boolean ranOutOfDimes = (boolean) results.get(5);
+      boolean ranOutOfNickels = (boolean) results.get(6);
 
+      if (ranOutOfQuarters) {
+        model.put("ranOutOfQuarters", "Sorry, we ran out of quarters and need to use smaller change.");
+      } else {
+        model.put("ranOutOfQuarters", "");
+      }
       model.put("quarters", quarters);
       model.put("dimes", dimes);
       model.put("nickels", nickels);
